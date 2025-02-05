@@ -11,19 +11,23 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    position: relative;
 }
 
 #image-container {
-    position: absolute; /* Ensures the cat can be freely positioned */
-    top: 50%;  /* Vertically centers the cat */
-    left: 20px; /* Positions the cat 20px from the left edge */
-    transform: translateY(-50%); /* Vertically centers the cat */
-    width: 150px; /* Sets the width of the cat image */
-    height: auto; /* Maintains aspect ratio */
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+#image-container img {
+    width: 150px;
+    height: auto;
 }
 
 #text-container {
-    z-index: 1; /* Makes sure the text is above the cat */
+    z-index: 1;
 }
 
 #question {
@@ -44,4 +48,26 @@ button {
     color: white;
     border: none;
     cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+#secret-message {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF1493;
+    margin-top: 20px;
+}
+
+#slideshow-container {
+    margin-top: 20px;
+}
+
+#slideshow {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    display: none;
 }
