@@ -5,7 +5,25 @@ body {
     overflow: hidden;
 }
 
-/* Slideshow */
+/* Draaiende kat */
+.cat-container {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: rotateCat 5s linear infinite;
+}
+.cat {
+    width: 100px;
+    height: 100px;
+}
+
+@keyframes rotateCat {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Diavoorstelling */
 .slideshow-container {
     position: relative;
     width: 300px;
@@ -27,15 +45,17 @@ body {
     color: red;
 }
 
-/* Vallende hartjes */
-@keyframes fall {
-    0% { transform: translateY(-10vh); opacity: 1; }
-    100% { transform: translateY(100vh); opacity: 0; }
+/* Stijl voor de knop */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 8px;
 }
-
-.heart {
-    position: absolute;
-    color: red;
-    font-size: 24px;
-    animation: fall 5s linear infinite;
+button:hover {
+    background-color: #ff4c4c;
 }
