@@ -1,65 +1,62 @@
-// Function to handle button click events
+// Functie om de "Ja" of "Nee" optie te verwerken
 function selectOption(option) {
-    // Check which option was clicked
     if (option === 'yes') {
-        // Flash rainbow colors
         flashRainbowColors(function() {
-            document.getElementById('question').style.display = 'none'; // Hide the question
-            displayCatHeart(); // Display the cat-heart.gif
+            document.getElementById('question').style.display = 'none';
+            document.getElementById('secret-message').classList.remove('hidden'); // Toon de geheime boodschap
+            startSlideshow(); // Start de afbeeldingenpresentatie
         });
     } else if (option === 'no') {
-        // Change text on the "No" button to "You sure?"
-        document.getElementById('no-button').innerText = 'You sure?'; 
-        // Increase font size of "Yes" button
+        document.getElementById('no-button').innerText = 'You sure?';
         var yesButton = document.getElementById('yes-button');
         var currentFontSize = window.getComputedStyle(yesButton).getPropertyValue('font-size');
-        var newSize = parseFloat(currentFontSize) * 2; // Increase font size by 2
+        var newSize = parseFloat(currentFontSize) * 2;
         yesButton.style.fontSize = newSize + 'px';
-    } else {
-        alert('Invalid option!');
     }
 }
 
-// Function to flash rainbow colors and then execute a callback function
+// Regenboog effect bij "Ja"
 function flashRainbowColors(callback) {
     var colors = ['#ff0000', '#ff7f00', '#ffff00', '#00ff00', '#0000ff', '#4b0082', '#9400d3'];
     var i = 0;
     var interval = setInterval(function() {
         document.body.style.backgroundColor = colors[i];
         i = (i + 1) % colors.length;
-    }, 200); // Change color every 200 milliseconds
+    }, 200);
     setTimeout(function() {
         clearInterval(interval);
-        document.body.style.backgroundColor = ''; // Reset background color
+        document.body.style.backgroundColor = '';
         if (callback) {
             callback();
         }
-    }, 2000); // Flash colors for 2 seconds
+    }, 2000);
 }
 
-// Function to display the cat.gif initially
+// Draaiende kat weergeven
 function displayCat() {
     var imageContainer = document.getElementById('image-container');
     var catImage = new Image();
-    catImage.src = 'cat.gif';  // Ensure the cat.gif is in the root directory
+    catImage.src = 'cat.gif';
     catImage.alt = 'Cat';
+    catImage.style.animation = "spin 4s linear infinite"; // Kat laten draaien
     catImage.onload = function() {
         imageContainer.appendChild(catImage);
     };
 }
 
-// Function to display the cat-heart.gif
-function displayCatHeart() {
-    document.getElementById('image-container').innerHTML = '';  // Clear existing content
-    var imageContainer = document.getElementById('image-container');
-    var catHeartImage = new Image();
-    catHeartImage.src = 'cat-heart.gif';  // Ensure the cat-heart.gif is in the root directory
-    catHeartImage.alt = 'Cat Heart';
-    catHeartImage.onload = function() {
-        imageContainer.appendChild(catHeartImage);
-        document.getElementById('options').style.display = 'none';  // Hide options after heart image
-    };
+// Start de afbeeldingenpresentatie
+function startSlideshow() {
+    var slideshow = document.getElementById('slideshow');
+    slideshow.style.display = 'block';
+
+    var images = ['photo1.jpg', 'photo2.jpg', 'photo3.jpg']; // Voeg hier je afbeeldingen toe
+    var index = 0;
+
+    setInterval(function() {
+        index = (index + 1) % images.length;
+        slideshow.src = images[index];
+    }, 2000); // Verandert afbeelding elke 2 seconden
 }
 
-// Call the displayCat function to show the cat image initially
+// Start de kat bij het laden van de pagina
 displayCat();
