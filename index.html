@@ -5,33 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Will You Be My Valentine?</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap">
-    <link rel="stylesheet" href="style.css"> <!-- Link naar externe CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="container">
-        <!-- Container voor de draaiende kat -->
-        <div id="image-container"></div>
+        <!-- Katten -->
+        <div id="left-cat-container"></div> <!-- Draaiende kat -->
+        <div id="right-cat-container"></div> <!-- Schattige kat -->
 
         <div id="text-container">
-            <!-- De hoofdvraag en opties -->
-            <div id="question-container">
-                <div id="question">Will you be my valentine?</div>
-                <div id="options">
-                    <button id="yes-button" onclick="selectOption('yes')">Yes</button>
-                    <button id="no-button" onclick="selectOption('no')">No</button>
-                </div>
+            <div id="question">Will you be my valentine?</div>
+            <div id="options">
+                <button id="yes-button" onclick="selectOption('yes')">Yes</button>
+                <button id="no-button" onclick="selectOption('no')">No</button>
             </div>
         </div>
 
         <!-- Verborgen boodschap -->
         <div id="secret-message" class="hidden">💖 I love you! 💖</div>
 
-        <!-- Afbeeldingenpresentatie -->
-        <div id="slideshow-container" class="hidden">
+        <!-- Slideshow -->
+        <div id="slideshow-container">
             <img id="slideshow" src="image1.jpg" alt="Slideshow image">
         </div>
     </div>
 
-    <script src="script.js"></script> <!-- Link naar externe JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
