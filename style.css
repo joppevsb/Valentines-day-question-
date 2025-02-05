@@ -14,16 +14,16 @@ body {
 }
 
 #image-container {
-    position: absolute; /* Zorgt ervoor dat de kat vrij kan bewegen */
-    top: 50%;  /* Zet de kat verticaal in het midden */
-    left: 20px; /* Zet de kat 20px van de linkerzijde */
-    transform: translateY(-50%); /* Centreert de kat verticaal */
-    width: 150px; /* Bepaal de breedte van de afbeelding */
-    height: auto; /* Zorg ervoor dat de hoogte in verhouding blijft */
+    position: absolute; /* Ensures the cat can be freely positioned */
+    top: 50%;  /* Vertically centers the cat */
+    left: 20px; /* Positions the cat 20px from the left edge */
+    transform: translateY(-50%); /* Vertically centers the cat */
+    width: 150px; /* Sets the width of the cat image */
+    height: auto; /* Maintains aspect ratio */
 }
 
 #text-container {
-    z-index: 1; /* Zorg ervoor dat de tekst boven de kat komt */
+    z-index: 1; /* Makes sure the text is above the cat */
 }
 
 #question {
