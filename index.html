@@ -1,32 +1,40 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentijn ❤️</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap">
+    <link rel="stylesheet" href="style.css"> <!-- Link to external stylesheet -->
 </head>
 <body>
+    <div id="container">
+        <!-- Container for displaying images -->
+        <div id="image-container"></div> 
 
-    <!-- Draaiende Kat -->
-    <div class="cat-container">
-        <img src="https://github.com/JOUW_USERNAME/JOUW_REPO/raw/main/kat.gif" alt="Draaiende Kat" class="cat">
+        <div id="text-container">
+            <!-- The main question -->
+            <div id="question">Will you be my valentine?</div> 
+
+            <!-- The buttons for Yes and No -->
+            <div id="options">
+                <button id="yes-button" onclick="selectOption('yes')">Yes</button> 
+                <button id="no-button" onclick="selectOption('no')">No</button> 
+            </div>
+        </div>
+
+        <!-- Secret Button -->
+        <button onclick="toonVerrassing()">Click here for a surprise!</button>
+        <p id="verrassing">I love you! ❤️</p>
+
+        <!-- Slideshow Container for photos -->
+        <div class="slideshow-container">
+            <img class="slide" src="https://github.com/JOUW_USERNAME/JOUW_REPO/raw/main/photo1.jpg" alt="Photo 1">
+            <img class="slide" src="https://github.com/JOUW_USERNAME/JOUW_REPO/raw/main/photo2.jpg" alt="Photo 2">
+            <img class="slide" src="https://github.com/JOUW_USERNAME/JOUW_REPO/raw/main/photo3.jpg" alt="Photo 3">
+        </div>
     </div>
 
-    <!-- Vraag voor Valentijn -->
-    <h1>Wil je mijn Valentijn zijn? ❤️</h1>
-
-    <!-- Diavoorstelling van foto's -->
-    <div class="slideshow-container">
-        <img class="slide" src="https://github.com/JOUW_USERNAME/JOUW_REPO/raw/main/foto1.jpg" alt="Foto 1">
-        <img class="slide" src="https://github.com/JOUW_USERNAME/JOUW_REPO/raw/main/foto2.jpg" alt="Foto 2">
-        <img class="slide" src="https://github.com/JOUW_USERNAME/JOUW_REPO/raw/main/foto3.jpg" alt="Foto 3">
-    </div>
-
-    <!-- Knop voor verborgen boodschap -->
-    <button onclick="toonVerrassing()">Klik hier voor een verrassing!</button>
-    <p id="verrassing">Ik hou van jou! ❤️</p>
-
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!-- Link to external JavaScript file -->
 </body>
 </html>
