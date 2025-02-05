@@ -27,6 +27,11 @@ body {
     animation: spin 4s linear infinite; /* Kat laten draaien */
 }
 
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
 #text-container {
     z-index: 1;
 }
@@ -52,7 +57,7 @@ button {
 }
 
 .hidden {
-    display: none; /* Verbergt elementen */
+    display: none;
 }
 
 #secret-message {
@@ -70,10 +75,4 @@ button {
     width: 300px;
     height: auto;
     border-radius: 10px;
-    display: none; /* Start verborgen */
-}
-
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
 }
