@@ -14,17 +14,31 @@ body {
     position: relative;
 }
 
-#image-container {
+/* Draaiende kat links */
+#left-cat-container {
     position: absolute;
     top: 50%;
-    left: 20px;
+    left: 80px; /* Iets verder naar rechts */
     transform: translateY(-50%);
 }
 
-#image-container img {
-    width: 150px;
+#left-cat-container img {
+    width: 180px; /* Iets groter */
     height: auto;
-    animation: spin 4s linear infinite; /* Kat laten draaien */
+    animation: spin 4s linear infinite;
+}
+
+/* Cutecat rechts */
+#right-cat-container {
+    position: absolute;
+    top: 50%;
+    right: 80px; /* Spiegelen met de draaiende kat */
+    transform: translateY(-50%);
+}
+
+#right-cat-container img {
+    width: 180px; /* Even groot als de draaiende kat */
+    height: auto;
 }
 
 @keyframes spin {
@@ -67,6 +81,7 @@ button {
     margin-top: 20px;
 }
 
+/* Slideshow */
 #slideshow-container {
     margin-top: 20px;
 }
@@ -75,4 +90,5 @@ button {
     width: 300px;
     height: auto;
     border-radius: 10px;
+    display: none;
 }
