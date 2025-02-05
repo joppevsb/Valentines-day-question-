@@ -1,94 +1,26 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    background-color: #FADADD;
-}
-
-#container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    position: relative;
-}
-
-/* Draaiende kat links */
+/* Draaiende kat links (veel groter en meer naar rechts) */
 #left-cat-container {
     position: absolute;
     top: 50%;
-    left: 80px; /* Iets verder naar rechts */
+    left: 250px; /* Meer naar rechts */
     transform: translateY(-50%);
 }
 
 #left-cat-container img {
-    width: 180px; /* Iets groter */
+    width: 480px; /* Bijna 3x groter */
     height: auto;
     animation: spin 4s linear infinite;
 }
 
-/* Cutecat rechts */
+/* Cutecat rechts (iets groter en meer naar links) */
 #right-cat-container {
     position: absolute;
     top: 50%;
-    right: 80px; /* Spiegelen met de draaiende kat */
+    right: 200px; /* Meer naar links */
     transform: translateY(-50%);
 }
 
 #right-cat-container img {
-    width: 180px; /* Even groot als de draaiende kat */
+    width: 250px; /* Iets groter */
     height: auto;
-}
-
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-#text-container {
-    z-index: 1;
-}
-
-#question {
-    font-family: 'Sacramento', cursive;
-    font-size: 52px;
-}
-
-#options {
-    margin-top: 20px;
-}
-
-button {
-    padding: 10px 20px;
-    margin: 0 10px;
-    font-size: 26px;
-    font-family: 'Sacramento', cursive;
-    background-color: #FB607F;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.hidden {
-    display: none;
-}
-
-#secret-message {
-    font-size: 24px;
-    font-weight: bold;
-    color: #FF1493;
-    margin-top: 20px;
-}
-
-/* Slideshow */
-#slideshow-container {
-    margin-top: 20px;
-}
-
-#slideshow {
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
-    display: none;
 }
