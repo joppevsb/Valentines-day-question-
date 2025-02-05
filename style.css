@@ -1,13 +1,13 @@
-/* Draaiende kat links (veel groter en meer naar rechts) */
+/* Draaiende kat links (3x groter en meer naar rechts) */
 #left-cat-container {
     position: absolute;
     top: 50%;
-    left: 250px; /* Meer naar rechts */
+    left: 300px; /* Nog meer naar rechts */
     transform: translateY(-50%);
 }
 
 #left-cat-container img {
-    width: 480px; /* Bijna 3x groter */
+    width: 600px; /* 3x groter */
     height: auto;
     animation: spin 4s linear infinite;
 }
@@ -16,11 +16,11 @@
 #right-cat-container {
     position: absolute;
     top: 50%;
-    right: 200px; /* Meer naar links */
+    right: 180px; /* Meer naar links */
     transform: translateY(-50%);
 }
 
 #right-cat-container img {
-    width: 250px; /* Iets groter */
+    width: 300px; /* Iets groter */
     height: auto;
 }
