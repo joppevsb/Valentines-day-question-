@@ -5,25 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Will You Be My Valentine?</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap">
-    <link rel="stylesheet" href="style.css"> <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css"> <!-- Link naar externe CSS -->
 </head>
 <body>
     <div id="container">
-        <!-- Container for displaying images -->
-        <div id="image-container"></div> <!-- This is where the cat will appear -->
+        <!-- Container voor de draaiende kat -->
+        <div id="image-container"></div>
 
         <div id="text-container">
-            <!-- The main question -->
-            <div id="question">Will you be my valentine?</div> 
+            <!-- De hoofdvraag -->
+            <div id="question">Will you be my valentine?</div>
 
-            <!-- The buttons for Yes and No -->
+            <!-- Ja/Nee knoppen -->
             <div id="options">
-                <button id="yes-button" onclick="selectOption('yes')">Yes</button> 
-                <button id="no-button" onclick="selectOption('no')">No</button> 
+                <button id="yes-button" onclick="selectOption('yes')">Yes</button>
+                <button id="no-button" onclick="selectOption('no')">No</button>
             </div>
+        </div>
+
+        <!-- Verborgen boodschap -->
+        <div id="secret-message" class="hidden">💖 I love you! 💖</div>
+
+        <!-- Afbeeldingenpresentatie -->
+        <div id="slideshow-container">
+            <img id="slideshow" src="photo1.jpg" alt="Slideshow image">
         </div>
     </div>
 
-    <script src="script.js"></script> <!-- Link to external JavaScript file -->
+    <script src="script.js"></script> <!-- Link naar externe JavaScript -->
 </body>
 </html>
