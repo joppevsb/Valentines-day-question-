@@ -13,20 +13,20 @@
         <div id="image-container"></div>
 
         <div id="text-container">
-            <!-- De hoofdvraag -->
-            <div id="question">Will you be my valentine?</div>
-
-            <!-- Ja/Nee knoppen -->
-            <div id="options">
-                <button id="yes-button" onclick="selectOption('yes')">Yes</button>
-                <button id="no-button" onclick="selectOption('no')">No</button>
+            <!-- De hoofdvraag en opties -->
+            <div id="question-container">
+                <div id="question">Will you be my valentine?</div>
+                <div id="options">
+                    <button id="yes-button" onclick="selectOption('yes')">Yes</button>
+                    <button id="no-button" onclick="selectOption('no')">No</button>
+                </div>
             </div>
         </div>
 
-        <!-- Verborgen boodschap (standaard verborgen) -->
+        <!-- Verborgen boodschap -->
         <div id="secret-message" class="hidden">💖 I love you! 💖</div>
 
-        <!-- Afbeeldingenpresentatie (standaard verborgen) -->
+        <!-- Afbeeldingenpresentatie -->
         <div id="slideshow-container" class="hidden">
             <img id="slideshow" src="image1.jpg" alt="Slideshow image">
         </div>
