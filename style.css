@@ -24,6 +24,7 @@ body {
 #image-container img {
     width: 150px;
     height: auto;
+    animation: spin 4s linear infinite; /* Kat laten draaien */
 }
 
 #text-container {
@@ -51,7 +52,7 @@ button {
 }
 
 .hidden {
-    display: none;
+    display: none; /* Verbergt elementen */
 }
 
 #secret-message {
@@ -69,5 +70,10 @@ button {
     width: 300px;
     height: auto;
     border-radius: 10px;
-    display: none;
+    display: none; /* Start verborgen */
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
