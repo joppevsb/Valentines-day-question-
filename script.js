@@ -49,7 +49,7 @@ function startSlideshow() {
     var slideshow = document.getElementById('slideshow');
     slideshow.style.display = 'block';
 
-    var images = ['photo1.jpg', 'photo2.jpg', 'photo3.jpg']; // Voeg hier je afbeeldingen toe
+    var images = ['Afbeelding(4) (3).jpg', 'Afbeelding(3) (3).jpg', 'Afbeelding(2) (4).jpg']; // Voeg hier je afbeeldingen toe
     var index = 0;
 
     setInterval(function() {
