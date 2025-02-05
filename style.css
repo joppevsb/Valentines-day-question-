@@ -1,29 +1,50 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: pink;
-    overflow: hidden;
+    font-family: Arial, sans-serif; /* Fallback font family */
+    text-align: center; /* Center-align text */
+    margin: 0; /* Remove default margin */
+    background-color: #FADADD; /* Set background color to light pink */
 }
 
-/* Draaiende kat */
-.cat-container {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: rotateCat 5s linear infinite;
-}
-.cat {
-    width: 100px;
-    height: 100px;
+#container {
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align items horizontally */
+    justify-content: center; /* Center-align items vertically */
+    height: 100vh; /* Make the container full viewport height */
 }
 
-@keyframes rotateCat {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+#image-container {
+    /* This container will hold the images */
 }
 
-/* Diavoorstelling */
+#question {
+    font-family: 'Sacramento', cursive; /* Apply Sacramento font to the question */
+    font-size: 52px; /* Set font size for the question */
+}
+
+#options {
+    margin-top: 20px; /* Add space above the options */
+}
+
+button {
+    padding: 10px 20px; /* Set padding for buttons */
+    margin: 0 10px; /* Set margin around buttons */
+    font-size: 26px; /* Set font size for buttons */
+    font-family: 'Sacramento', cursive; /* Apply Sacramento font to the options */
+    background-color: #FB607F; /* Set button background color */
+    color: white; /* Set text color to white */
+    border: none; /* Remove button border */
+    cursor: pointer; /* Set cursor to pointer on hover */
+}
+
+/* Styling for the secret surprise message */
+#verrassing {
+    display: none;
+    font-size: 20px;
+    color: red;
+}
+
+/* Slideshow Styling */
 .slideshow-container {
     position: relative;
     width: 300px;
@@ -36,26 +57,4 @@ body {
     height: 100%;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-}
-
-/* Verborgen verrassing */
-#verrassing {
-    display: none;
-    font-size: 20px;
-    color: red;
-}
-
-/* Stijl voor de knop */
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #ff6b6b;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 20px;
-    border-radius: 8px;
-}
-button:hover {
-    background-color: #ff4c4c;
 }
