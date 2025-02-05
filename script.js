@@ -2,10 +2,10 @@
 function selectOption(option) {
     if (option === 'yes') {
         flashRainbowColors(function() {
-            document.getElementById('question').style.display = 'none';
+            document.getElementById('question-container').classList.add('hidden'); // Verberg de vraag + knoppen
             document.getElementById('secret-message').classList.remove('hidden'); // Toon de geheime boodschap
-            document.getElementById('slideshow-container').classList.remove('hidden'); // Toon de slideshow
-            startSlideshow(); // Start de diavoorstelling
+            document.getElementById('slideshow-container').classList.remove('hidden'); // Start de slideshow
+            startSlideshow();
         });
     } else if (option === 'no') {
         document.getElementById('no-button').innerText = 'You sure?';
@@ -39,6 +39,7 @@ function displayCat() {
     var catImage = new Image();
     catImage.src = 'cat.gif';
     catImage.alt = 'Cat';
+    catImage.style.animation = "spin 4s linear infinite"; // Kat laten draaien
     catImage.onload = function() {
         imageContainer.appendChild(catImage);
     };
@@ -47,10 +48,7 @@ function displayCat() {
 // Start de afbeeldingenpresentatie
 function startSlideshow() {
     var slideshow = document.getElementById('slideshow');
-    slideshow.style.display = 'block';
-
-    // Afbeeldingen met eenvoudige namen
-    var images = ['image1.jpg', 'image2.jpg', 'image3.jpg']; 
+    var images = ['image1.jpg', 'image2.jpg', 'image3.jpg']; // Correcte bestandsnamen
     var index = 0;
 
     setInterval(function() {
